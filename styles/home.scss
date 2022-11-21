@@ -1,0 +1,66 @@
+.home {
+  @apply w-full h-full;
+
+  &__fiters {
+    @apply flex flex-row-reverse justify-between items-center w-full py-5 px-5 bg-black;
+
+    @screen md {
+      @apply bg-white flex-row;
+    }
+
+    &--work {
+      @apply w-1/2 flex items-center space-x-1 justify-end;
+
+      :nth-child(1) {
+        @apply text-[#A3A3A3];
+      }
+
+      :nth-child(2) {
+        @apply text-white;
+
+        @screen md {
+          @apply text-black;
+        }
+      }
+
+      @screen md {
+        @apply justify-start;
+      }
+    }
+
+    &--industry {
+      @apply w-1/2 flex items-center justify-start space-x-1;
+
+      @screen md {
+        @apply justify-end;
+      }
+
+      :nth-child(1) {
+        @apply text-[#A3A3A3];
+      }
+
+      :nth-child(2) {
+        @apply text-white;
+
+        @screen md {
+          @apply text-black;
+        }
+      }
+    }
+  }
+
+  &__works {
+    @apply gallery;
+  }
+}
+
+.gallery {
+  @apply w-full grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @screen md {
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-rows: repeat(auto, 1fr);
+  }
+}
