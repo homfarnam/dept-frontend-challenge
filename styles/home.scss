@@ -52,6 +52,39 @@
   &__works {
     @apply gallery;
   }
+
+  &__brands {
+    @apply flex flex-col w-full h-auto p-16 text-white bg-black;
+
+    &--title {
+      @apply flex flex-col  items-start justify-start w-full mx-auto space-y-3;
+      h3 {
+        @apply text-2xl;
+      }
+
+      p {
+        @apply text-lg;
+      }
+
+      @screen md {
+        h3 {
+          @apply text-4xl;
+        }
+
+        p {
+          @apply text-lg;
+        }
+      }
+    }
+
+    &--icons {
+      @apply grid gap-10 py-10 mx-auto place-items-center;
+      grid-template-columns: repeat(2, minmax(auto, 1fr));
+      @screen lg {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+      }
+    }
+  }
 }
 
 .gallery {
