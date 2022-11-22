@@ -1,5 +1,6 @@
 import {
   Brands,
+  ContactForm,
   Filters,
   ImageWithNews,
   Layout,
@@ -55,6 +56,7 @@ const Home: NextPage = () => {
 
         <Projects data={FourthImagesList} />
         <Brands />
+        <ContactForm />
       </div>
     </Layout>
   )
