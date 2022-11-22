@@ -123,6 +123,10 @@
         @apply flex flex-col w-full;
 
         @screen lg {
+          @apply flex flex-col w-2/3;
+        }
+
+        @screen xl {
           @apply flex flex-col w-1/2;
         }
 
