@@ -6,6 +6,7 @@ import Layout from './shared/Layout/Layout'
 import NavBar from './shared/Layout/NavBar'
 import Slider from './Slider/Slider'
 import Project from './Project/Project'
+import Brands from './Brands/Brands'
 
 export {
   Layout,
@@ -16,4 +17,5 @@ export {
   Projects,
   ImageWithNews,
   Project,
+  Brands,
 }
