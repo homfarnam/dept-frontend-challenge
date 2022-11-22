@@ -1,50 +1,29 @@
-import Image from 'next/image'
 import {
+  Brands,
   Filters,
-  ImageCard,
   ImageWithNews,
   Layout,
-  Project,
   Projects,
   Slider,
 } from '../components'
-import Building from '../public/images/building.png'
-import Cartoon from '../public/images/cartoon.png'
 import BehindMan from '../public/images/behind-man.png'
 import Ecosystem from '../public/images/ecosystem.jpeg'
+import {
+  FirstImagesList,
+  FourthImagesList,
+  news,
+  SecondImagesList,
+  ThirdImagesList,
+} from 'data/data'
+import { NextPage } from 'next'
 
-export default function Home() {
-  const news: {
-    id: number
-    title: string
-    description: string
-  }[] = [
-    {
-      id: 1,
-      title: 'Microsoft',
-      description:
-        'Tapping into Ireland’s unique gaming culture and bringing a fresh flavour to their Xbox social media channels',
-    },
-    {
-      id: 2,
-      title: 'O’NEILL',
-      description:
-        'Integrating existing content into O’Neills’s new e-commerce platform',
-    },
-    {
-      id: 3,
-      title: 'Microsoft',
-      description:
-        'Tapping into Ireland’s unique gaming culture and bringing a fresh flavour to their Xbox social media channels',
-    },
-  ]
-
+const Home: NextPage = () => {
   return (
     <Layout title="Dept Frontend Challenge">
       <div className="home">
         <Slider />
         <Filters />
-        <Projects />
+        <Projects data={FirstImagesList} />
         <ImageWithNews
           data={news}
           image={BehindMan}
@@ -52,22 +31,8 @@ export default function Home() {
           title="FLORENSIS"
           description="Rethinking the entire online ecosystem"
         />
-        <div className="gallery">
-          <Project
-            image={Building}
-            alt="Building"
-            title="BE LIGHTNING"
-            description="Delivering clarity on a global scale"
-            withReadMore
-          />
-          <Project
-            image={Cartoon}
-            alt="Cartoon"
-            title="TUI"
-            description="Swipe to find your next holiday destination"
-            withReadMore
-          />
-        </div>
+        <Projects data={ThirdImagesList} />
+
         <ImageWithNews
           data={news}
           image={Ecosystem}
@@ -76,7 +41,23 @@ export default function Home() {
           description="Rethinking the entire online ecosystem"
           reverse
         />
+        <Projects data={SecondImagesList} />
+        <div className="flex flex-col items-center justify-center w-full py-10 text-white bg-black">
+          <p className="w-2/3 text-center md:w-1/2">
+            “Dept helped us tell our story through a bold new identity and a
+            robust online experience. To the tone of 60% growth in online
+            bookings in just one month””
+          </p>
+          <span className="mt-3 text-sm font-light">
+            MATTIJS TEN DRINK - CEO, TRANSAVIA
+          </span>
+        </div>
+
+        <Projects data={FourthImagesList} />
+        <Brands />
       </div>
     </Layout>
   )
 }
+
+export default Home
