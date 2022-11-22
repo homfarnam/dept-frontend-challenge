@@ -7,6 +7,7 @@ import NavBar from './shared/Layout/NavBar'
 import Slider from './Slider/Slider'
 import Project from './Project/Project'
 import Brands from './Brands/Brands'
+import ContactForm from './ContactForm/ContactForm'
 
 export {
   Layout,
@@ -18,4 +19,5 @@ export {
   ImageWithNews,
   Project,
   Brands,
+  ContactForm,
 }
