@@ -40,8 +40,8 @@ const ImageWithNews = ({
           description={() => (
             <div className="text-white">
               <h3 className="my-4">{title}</h3>
-              <p className="font-light text-4xl">{description}</p>
-              <button className="flex mt-3 items-baseline justify-start gap-2">
+              <p className="text-4xl font-light">{description}</p>
+              <button className="flex items-baseline justify-start gap-2 mt-3">
                 <Image src={ReadMore} alt="ReadMore" />
                 Read More
               </button>
@@ -49,7 +49,7 @@ const ImageWithNews = ({
           )}
         />
       </div>
-      <div className="md:w-1/3 w-full p-10 flex flex-col gap-10 justify-center items-start bg-black text-white h-full">
+      <div className="flex flex-col items-start justify-center w-full h-full gap-10 p-10 text-white bg-black md:w-1/3">
         <div className="flex flex-col items-start gap-1">
           <h3>Microsoft</h3>
           <p>
