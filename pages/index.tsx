@@ -1,12 +1,6 @@
-import {
-  Brands,
-  ContactForm,
-  Filters,
-  ImageWithNews,
-  Layout,
-  Projects,
-  Slider,
-} from '../components'
+import { NextPage } from 'next'
+import dynamic from 'next/dynamic'
+import { Layout } from '../components'
 import BehindMan from '../public/images/behind-man.png'
 import Ecosystem from '../public/images/ecosystem.jpeg'
 import {
@@ -16,7 +10,36 @@ import {
   SecondImagesList,
   ThirdImagesList,
 } from 'data/data'
-import { NextPage } from 'next'
+
+const Slider = dynamic(() => import('../components/Slider/Slider'), {
+  ssr: false,
+})
+
+const Filters = dynamic(() => import('../components/Filters/Filters'), {
+  ssr: false,
+})
+
+const Projects = dynamic(() => import('../components/Projects/Projects'), {
+  ssr: false,
+})
+
+const Brands = dynamic(() => import('../components/Brands/Brands'), {
+  ssr: false,
+})
+
+const ContactForm = dynamic(
+  () => import('../components/ContactForm/ContactForm'),
+  {
+    ssr: false,
+  }
+)
+
+const ImageWithNews = dynamic(
+  () => import('../components/ImageWithNews/ImageWithNews'),
+  {
+    ssr: false,
+  }
+)
 
 const Home: NextPage = () => {
   return (
