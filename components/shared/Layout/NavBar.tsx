@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { useWindowSize } from '../../../hooks'
 import { DesktopNavLinks } from './Navlinks'
 import MegaMenu from './MegaMenu'
@@ -12,7 +11,6 @@ import LogoDark from '../../../public/images/DEPT-LOGO-black.svg'
 interface NavBarProps {}
 
 const NavBar = ({}: NavBarProps) => {
-  const router = useRouter()
   const { width } = useWindowSize()
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false)
 

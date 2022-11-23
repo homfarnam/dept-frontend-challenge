@@ -1,6 +1,4 @@
-import React from 'react'
 import Project from '../Project/Project'
-import { ImagesListType } from 'types/types'
 import type { ProductsType } from 'types/types'
 
 interface ProjectsProps {
