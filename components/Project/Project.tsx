@@ -28,9 +28,9 @@ const Project = ({
         description={() => (
           <div className="text-white">
             <h3 className="my-4 uppercase">{title}</h3>
-            <p className="font-light text-4xl">{description}</p>
+            <p className="text-4xl font-light">{description}</p>
             {withReadMore ? (
-              <button className="flex mt-3 items-baseline justify-start gap-2">
+              <button className="flex items-baseline justify-start gap-2 mt-3">
                 <Image src={ReadMore} alt="ReadMore" />
                 Read More
               </button>
