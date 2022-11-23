@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@at-root {
+  body {
+    scroll-behavior: smooth;
+  }
+}
