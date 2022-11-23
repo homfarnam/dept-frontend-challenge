@@ -3,13 +3,9 @@ import dynamic from 'next/dynamic'
 import { Layout } from '../components'
 import BehindMan from '../public/images/behind-man.png'
 import Ecosystem from '../public/images/ecosystem.jpeg'
-import {
-  FirstImagesList,
-  FourthImagesList,
-  news,
-  SecondImagesList,
-  ThirdImagesList,
-} from 'data/data'
+import { news } from 'data/data'
+import { useFetchData } from 'hooks'
+import type { ProductsType } from 'types/types'
 
 const Slider = dynamic(() => import('../components/Slider/Slider'), {
   ssr: false,
@@ -42,12 +38,16 @@ const ImageWithNews = dynamic(
 )
 
 const Home: NextPage = () => {
+  const { data, isLoading } = useFetchData<ProductsType[]>('products')
+
+  console.log({ data })
+
   return (
     <Layout title="Dept Frontend Challenge">
       <div className="home">
         <Slider />
         <Filters />
-        <Projects data={FirstImagesList} />
+        <Projects data={data?.slice(0, 4)} />
         <ImageWithNews
           data={news}
           image={BehindMan}
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
           title="FLORENSIS"
           description="Rethinking the entire online ecosystem"
         />
-        <Projects data={ThirdImagesList} />
+        <Projects data={data?.slice(4, 6)} />
 
         <ImageWithNews
           data={news}
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           description="Rethinking the entire online ecosystem"
           reverse
         />
-        <Projects data={SecondImagesList} />
+        <Projects data={data?.slice(8, 12)} />
         <div className="flex flex-col items-center justify-center w-full py-10 text-white bg-black">
           <p className="w-2/3 text-center md:w-1/2">
             “Dept helped us tell our story through a bold new identity and a
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
           </span>
         </div>
 
-        <Projects data={FourthImagesList} />
+        <Projects data={data?.slice(14, 18)} />
         <Brands />
         <ContactForm />
       </div>
