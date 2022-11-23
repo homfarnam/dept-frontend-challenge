@@ -1,7 +1,37 @@
-:root {
-  --time: 0;
-}
-
 .custom-input {
   @apply py-2 border-b border-black outline-none;
+}
+
+.project {
+  @apply w-full h-[500px] relative;
+
+  &__details {
+    @apply text-white;
+
+    h3 {
+      @apply my-4 uppercase;
+    }
+
+    p {
+      @apply text-4xl font-light;
+    }
+
+    button {
+      @apply flex items-baseline justify-start gap-2 mt-3;
+    }
+  }
+}
+
+.imageWithNews {
+  @apply w-full flex flex-col items-center relative;
+
+  @screen md {
+    @apply h-[568px];
+  }
+
+  &--reverse {
+    @screen md {
+      @apply flex-row-reverse;
+    }
+  }
 }

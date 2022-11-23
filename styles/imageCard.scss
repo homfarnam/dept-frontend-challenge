@@ -1,5 +1,5 @@
 .imageText {
-  @apply flex items-end p-5 justify-center  h-full relative;
+  @apply flex items-end p-5 justify-center  h-full relative z-50;
 
   @screen md {
     @apply w-1/2 items-end justify-center p-12;
@@ -7,4 +7,8 @@
   p {
     @apply text-ellipsis overflow-hidden w-full h-[113px];
   }
+}
+
+.imageCover {
+  @apply absolute z-20 w-full h-full bg-black opacity-20;
 }
