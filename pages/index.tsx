@@ -40,8 +40,6 @@ const ImageWithNews = dynamic(
 const Home: NextPage = () => {
   const { data, isLoading } = useFetchData<ProductsType[]>('products')
 
-  console.log({ data })
-
   return (
     <Layout title="Dept Frontend Challenge">
       <div className="home">
