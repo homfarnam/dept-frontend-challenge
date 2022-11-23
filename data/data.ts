@@ -1,10 +1,6 @@
-import { ImagesListType } from 'types/types'
+import { ImagesListType, Post } from 'types/types'
 
-const news: {
-  id: number
-  title: string
-  description: string
-}[] = [
+const news: Post[] = [
   {
     id: 1,
     title: 'Microsoft',
