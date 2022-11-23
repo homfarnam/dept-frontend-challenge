@@ -1,5 +1,5 @@
 .imageText {
-  @apply flex items-end p-5 justify-center  h-full relative z-50;
+  @apply flex items-end p-5 justify-center  h-full relative z-30;
 
   @screen md {
     @apply w-1/2 items-end justify-center p-12;
