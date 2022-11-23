@@ -12,4 +12,19 @@ type NavLinksType = {
   link: string
 }
 
-export { ImagesListType, NavLinksType }
+interface Rating {
+  rate: number
+  count: number
+}
+
+interface ProductsType {
+  id: number
+  title: string
+  price: number
+  description: string
+  category: string
+  image: string
+  rating: Rating
+}
+
+export { ImagesListType, NavLinksType, ProductsType }
