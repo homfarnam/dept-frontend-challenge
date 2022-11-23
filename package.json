@@ -9,8 +9,8 @@
     "lint": "next lint",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
-    "e2e": "start-server-and-test dev http://localhost:3000 cypress",
-    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
+    "e2e": "start-server-and-test dev http://localhost:4000 cypress",
+    "e2e:headless": "start-server-and-test dev http://localhost:4000 cypress:headless"
   },
   "dependencies": {
     "@next/font": "^13.0.4",
