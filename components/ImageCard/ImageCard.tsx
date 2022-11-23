@@ -29,12 +29,8 @@ const ImageCard = ({
         src={image}
         className="object-cover"
       />
-      {cover ? (
-        <div className="absolute z-20 w-full h-full bg-black opacity-20" />
-      ) : null}
-      {description ? (
-        <div className="z-30 imageText">{description()}</div>
-      ) : null}
+      {cover ? <div className="imageCover" /> : null}
+      {description ? <div className="imageText">{description()}</div> : null}
     </>
   )
 }

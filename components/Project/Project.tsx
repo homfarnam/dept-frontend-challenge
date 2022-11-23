@@ -19,18 +19,18 @@ const Project = ({
   withReadMore,
 }: IProjectProps) => {
   return (
-    <div className="w-full h-[500px] relative">
+    <div className="project">
       <ImageCard
         image={image}
         size="100vw"
         cover
         alt={alt}
         description={() => (
-          <div className="text-white">
-            <h3 className="my-4 uppercase">{title}</h3>
-            <p className="text-4xl font-light">{description}</p>
+          <div className="project__details">
+            <h3>{title}</h3>
+            <p>{description}</p>
             {withReadMore ? (
-              <button className="flex items-baseline justify-start gap-2 mt-3">
+              <button>
                 <Image src={ReadMore} alt="ReadMore" />
                 Read More
               </button>
