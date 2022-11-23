@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { StyledMenuItem } from 'styles/styled'
 import { MobileNavLinks } from './Navlinks'
 
 interface MegaMenuProps {
@@ -17,19 +18,6 @@ const MegaMenu = ({ handleOpen, isOpen }: MegaMenuProps) => {
       body.style.overflowY = 'hidden'
     }
   }, [isOpen])
-
-  useEffect(() => {
-    if (time) {
-      // increase the time by 1 every second
-      var timer = setTimeout(() => setTime((prev) => prev + 1), 1000)
-      console.log({ timer })
-      document.body.style.setProperty('--time', `${time}s`)
-    }
-
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [time])
 
   const handleClose = () => {
     const body = document.body
@@ -68,10 +56,14 @@ const MegaMenu = ({ handleOpen, isOpen }: MegaMenuProps) => {
         {MobileNavLinks.map((item, i) => {
           return (
             <>
-              <div key={item.id} className="megaMenu__menu__item">
+              <StyledMenuItem
+                index={i}
+                key={item.id}
+                className="megaMenu__menu__item"
+              >
                 <Link href="#">{item.title}</Link>
                 <hr className="w-full border border-[#A3A3A3]" />
-              </div>
+              </StyledMenuItem>
             </>
           )
         })}
