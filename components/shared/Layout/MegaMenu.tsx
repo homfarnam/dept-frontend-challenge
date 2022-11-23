@@ -45,7 +45,8 @@ const MegaMenu = ({ handleOpen, isOpen }: MegaMenuProps) => {
             onClick={handleClose}
             src="/images/icons/close.svg"
             className="cursor-pointer"
-            alt="logo"
+            id="close"
+            alt="close"
             width={30}
             height={30}
           />

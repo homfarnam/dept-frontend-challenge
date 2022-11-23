@@ -40,6 +40,7 @@ const NavBar = ({}: NavBarProps) => {
           <Image
             onClick={handleMegaMenu}
             src={Dots}
+            id="dots"
             className="hidden cursor-pointer md:flex"
             alt="logo"
           />
