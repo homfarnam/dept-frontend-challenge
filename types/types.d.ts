@@ -27,4 +27,10 @@ interface ProductsType {
   rating: Rating
 }
 
-export { ImagesListType, NavLinksType, ProductsType }
+type Post = {
+  id: number
+  title: string
+  description: string
+}
+
+export { ImagesListType, NavLinksType, ProductsType, Post }
