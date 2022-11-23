@@ -1,20 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ImageCard from '../ImageCard/ImageCard'
 import BehindMan from '../../public/images/behind-man.png'
 import ReadMore from '../../public/images/read-more.svg'
 import Image, { StaticImageData } from 'next/image'
+import type { Post } from 'types/types'
 
 interface ImageWithNewsProps {
   reverse?: boolean
-  data: {
-    id: number
-    title: string
-    description: string
-  }[]
+  data: Post[]
   image: string | StaticImageData
   alt: string
   title: string
   description: string
+}
+
+const PostDetails = ({ data }: { data: Post }) => {
+  return (
+    <>
+      {data.id % 2 === 0 && <hr className="w-full" />}
+
+      <div className="flex flex-col items-start gap-1">
+        <h3>{data.title}</h3>
+        <p>{data.description}</p>
+        <button className="flex items-baseline justify-start gap-2">
+          <Image src={ReadMore} alt="ReadMore" />
+          Read More
+        </button>
+      </div>
+      {data.id % 2 === 0 && <hr className="w-full" />}
+    </>
+  )
 }
 
 const ImageWithNews = ({
@@ -49,42 +64,11 @@ const ImageWithNews = ({
           )}
         />
       </div>
-      <div className="flex flex-col items-start justify-center w-full h-full gap-10 p-10 text-white bg-black md:w-1/3">
-        <div className="flex flex-col items-start gap-1">
-          <h3>Microsoft</h3>
-          <p>
-            Tapping into Ireland’s unique gaming culture and bringing a fresh
-            flavour to their Xbox social media channels
-          </p>
-          <button className="flex items-baseline justify-start gap-2">
-            <Image src={ReadMore} alt="ReadMore" />
-            Read More
-          </button>
-          <hr className="w-full" />
-        </div>
-        <div className="flex flex-col items-start gap-1">
-          <h3>O’NEILL</h3>
-          <p>
-            Integrating existing content into O’Neills’s new e-commerce platform
-          </p>
-          <button className="flex items-baseline justify-start gap-2">
-            <Image src={ReadMore} alt="ReadMore" />
-            Read More
-          </button>
-        </div>
-        <hr className="w-full" />
 
-        <div className="flex flex-col items-start gap-1">
-          <h3>Microsoft</h3>
-          <p>
-            Tapping into Ireland’s unique gaming culture and bringing a fresh
-            flavour to their Xbox social media channels
-          </p>
-          <button className="flex items-baseline justify-start gap-2">
-            <Image src={ReadMore} alt="ReadMore" />
-            Read More
-          </button>
-        </div>
+      <div className="flex flex-col items-start justify-center w-full h-full gap-10 p-10 text-white bg-black md:w-1/3">
+        {data.map((item) => (
+          <PostDetails data={item} key={item.id} />
+        ))}
       </div>
     </div>
   )
