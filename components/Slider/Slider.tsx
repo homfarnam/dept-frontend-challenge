@@ -11,10 +11,11 @@ const Slider = ({}: ISliderProps) => {
         image={SliderImage}
         size="100vw"
         alt="slider"
+        priority
         description={() => (
           <div className="text-white">
             <h3 className="my-4">Work</h3>
-            <p className="font-light text-4xl">
+            <p className="text-4xl font-light">
               A selection of projects that{' '}
               <strong className="font-bold">pioneer tech</strong> and{' '}
               <strong className="font-bold">marketing </strong> to help brands

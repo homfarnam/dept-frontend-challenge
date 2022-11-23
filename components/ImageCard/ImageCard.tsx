@@ -7,6 +7,7 @@ interface ImageCardProps {
   description?: () => JSX.Element
   size?: string
   cover?: boolean
+  priority?: boolean
 }
 
 const ImageCard = ({
@@ -15,11 +16,13 @@ const ImageCard = ({
   description,
   size,
   cover,
+  priority,
 }: ImageCardProps) => {
   return (
     <>
       <Image
         alt={alt}
+        priority={priority}
         quality={100}
         sizes={size}
         fill
@@ -27,10 +30,10 @@ const ImageCard = ({
         className="object-cover"
       />
       {cover ? (
-        <div className="w-full h-full bg-black opacity-20 absolute z-20" />
+        <div className="absolute z-20 w-full h-full bg-black opacity-20" />
       ) : null}
       {description ? (
-        <div className="imageText z-30">{description()}</div>
+        <div className="z-30 imageText">{description()}</div>
       ) : null}
     </>
   )
