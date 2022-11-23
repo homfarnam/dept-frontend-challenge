@@ -6,4 +6,10 @@ type ImagesListType = {
   description: string
 }
 
-export { ImagesListType }
+type NavLinksType = {
+  id: number
+  title: string
+  link: string
+}
+
+export { ImagesListType, NavLinksType }
