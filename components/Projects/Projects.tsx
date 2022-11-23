@@ -1,25 +1,30 @@
 import React from 'react'
 import Project from '../Project/Project'
 import { ImagesListType } from 'types/types'
+import type { ProductsType } from 'types/types'
 
 interface ProjectsProps {
-  data: ImagesListType[]
+  data: ProductsType[] | undefined
 }
 
 const Projects = ({ data }: ProjectsProps) => {
   return (
-    <section className="home__works">
-      {data.map((item) => (
-        <Project
-          key={item.id}
-          image={item.image}
-          alt={item.alt}
-          title={item.title}
-          description={item.description}
-          withReadMore
-        />
-      ))}
-    </section>
+    <>
+      {data ? (
+        <section className="home__works">
+          {data.map((item) => (
+            <Project
+              key={item.id}
+              image={item.image}
+              alt={item.title}
+              title={item.category}
+              description={item.description}
+              withReadMore
+            />
+          ))}
+        </section>
+      ) : null}
+    </>
   )
 }
 
