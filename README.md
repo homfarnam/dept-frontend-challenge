@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dept Frontend Challenge
 
-## Getting Started
+It's a frontend app for Dept frontend challenge.
+ 
+See demo **[here](https://dept-frontend-challenge.vercel.app/)** .
 
-First, run the development server:
+
+## Installation
+
+You can install the dependencies with these commands.
+
+npm:
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+yarn:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Deployment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To Start this project run
 
-## Learn More
+npm:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+yarn:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+yarn start
+```
 
-## Deploy on Vercel
+## Test
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To test this project run
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+npm:
+
+```bash
+npm run cypress
+```
+
+yarn:
+
+```bash
+yarn cypress
+```
+
+## 🧰 Libraries and tools
+
+- ✅ Programming Language: **JavaScript, Typescript**
+- ✅ Typecheck: **[Typescript](https://www.typescriptlang.org/)**
+- ✅ Dom Manipulation: **[React](https://reactjs.org/)**
+- ✅ Network Layer: **[React Query](https://react-query.tanstack.com/),[Axios](https://axios-http.com/)**
+- ✅ CSS Framework: **[Tailwind CSS](https://tailwindcss.com/), [Styled components](https://styled-components.com/)**
+- ✅ Styling: **[SCSS](https://www.npmjs.com/package/sass)**
+- ✅ Code Quality: **[ESLint](https://eslint.org/), [Prettier](https://prettier.io/)**
+
+
+## 🪝 Hooks
+
+#### General
+
+- UseFetchData hook for get the prdocuts fake data with `react-query`. Located in `hooks` directory
+- UseWindowSize hook for get the width and height of the viewport and screen. Located in `hooks` directory
+
+
