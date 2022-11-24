@@ -37,3 +37,5 @@ describe('empty spec', () => {
     cy.scrollTo('top')
   })
 })
+
+export {}
