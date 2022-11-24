@@ -63,6 +63,14 @@ yarn cypress
 - ✅ Styling: **[SCSS](https://www.npmjs.com/package/sass)**
 - ✅ Code Quality: **[ESLint](https://eslint.org/), [Prettier](https://prettier.io/)**
 
+### Usage of some packages
+
+- **[React Query](https://react-query.tanstack.com/)**: For fetching data from API and caching it.
+- **[Axios](https://axios-http.com/)**: For fetching data from API.
+- **[Tailwind CSS](https://tailwindcss.com/)**: For styling the app.
+- **[sass](https://www.npmjs.com/package/sass)**: For compiling scss files to css files.
+- **[Styled components](https://styled-components.com/)**: For render dynamic styles.
+
 
 ## 🪝 Hooks
 
