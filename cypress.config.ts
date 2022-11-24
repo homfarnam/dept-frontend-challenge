@@ -7,7 +7,7 @@ export default defineConfig({
       require('@cypress/code-coverage/task')(on, config)
       return config
     },
-    baseUrl: 'http://localhost:4000',
+    baseUrl: 'http://localhost:3000',
   },
 
   component: {
