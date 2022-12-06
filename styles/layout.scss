@@ -146,7 +146,8 @@
 }
 
 .megaMenu {
-  @apply z-50 w-full h-full p-10 bg-black;
+  @apply w-full h-full p-10 bg-black;
+  z-index: 999;
   -webkit-animation: fadeIn 0.1s ease-in both;
   animation: fadeIn 0.5s ease-in both;
   overflow-y: auto;
