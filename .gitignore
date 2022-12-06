@@ -41,3 +41,6 @@ next-env.d.ts
 /cypress/videos
 /cypress/screenshots
 .nyc_output
+
+
+.swc
